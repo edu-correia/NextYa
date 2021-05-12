@@ -1,15 +1,10 @@
 .sessionDownload{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
 
 
+    
     .logoMensagem{
-        display: flex;
-        flex-direction: row;
 
         img{
             height: 7rem;
@@ -26,14 +21,6 @@
 
     }
 
-}
-.botoes{
-        
-    font-family: Lexend;
-    color: black;
-    border-radius: 10px;
-    margin-left: 2rem;
-    background-color: white;
 }
 
 .sessionInfo{
