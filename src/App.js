@@ -12,6 +12,13 @@ export default ()=>{
   }, [])
 
     return(
-      <div>
+      <>
           <Main/>
-          <Navbar/
+          <Navbar/>
+          <Session/>
+          <Footer/>
+          
+      </>
+
+    )
+}
