@@ -1,0 +1,110 @@
+.sessionDownload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: solid 1px #E1E1E1;
+
+
+    .logoMensagem{
+        display: flex;
+        flex-direction: row;
+
+        img{
+            height: 7rem;
+            width: 7rem;
+        }
+
+        h1{
+            font-family: Lexend Deca;
+            font-size: 3rem;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding-left: 10px;
+        }
+
+    }
+
+    .botoes{
+        display: flex;
+        flex-direction: row;
+        padding-top: 25px;
+    }
+}
+
+.sessionInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 85px 0px;
+    border-bottom: solid 1px #E1E1E1;
+    
+
+    .infoMotoqueiro{
+  
+        display: flex;
+        flex-direction: row;
+
+        img{
+            height: 10rem;
+            width: 10rem;
+            margin-left: 1.06rem;
+        }
+
+        div{
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            padding-left: 1rem;
+
+            h1{
+                font-family: Lexend Deca;
+                font-size: 3rem;
+            }
+
+            p{
+                font-family: Inter;
+                font-weight: 500;
+                font-size: 1.5rem;
+
+                
+            }
+        }
+    }
+    .infoRestaurante{
+  
+        display: flex;
+        flex-direction: row;
+        margin-left: 1.06rem;
+
+        img{
+            height: 10rem;
+            width: 10rem;
+            margin-right: 1px;
+        }
+
+        div{
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            h1{
+                font-family: Lexend Deca;
+                font-size: 3rem;
+            }
+
+            p{
+                font-family: Inter;
+                font-weight: 500;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    
+}

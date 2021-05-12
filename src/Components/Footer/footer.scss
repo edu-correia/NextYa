@@ -1,0 +1,46 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    position: relative;
+    .logo--suporte{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        img{
+            width: 10rem;
+            margin-left: 15rem;
+            margin-top: 10rem;    
+        }
+
+        a{
+            font-family: Inter;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #fff;
+
+            margin-right: 15rem;
+            margin-top: 10rem; 
+
+            &:link{
+                text-decoration: none;
+            }
+        }
+    }
+
+    .btnDowload{
+        display: flex;
+        flex-direction: column;
+        margin-left: 14rem;
+        margin-top: 5px;
+
+        img{
+            width: 15rem;
+        }
+    }
+
+    
+
+}
