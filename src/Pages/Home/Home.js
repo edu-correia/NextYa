@@ -1,4 +1,3 @@
-import react from 'react';
 import Logo from '../../Assets/logo01.png';
 import Motoqueiro from '../../Assets/motoBoy.png';
 import Cozinheiro from '../../Assets/cozinheiro.png';
@@ -8,8 +7,7 @@ import Button from '@material-ui/core/Button';
 import { DiAndroid } from 'react-icons/di';
 import { DiWindows } from 'react-icons/di';
 
-const Home = () => {
-  return(
+const Home = () => (
   <>
     <div className="sessionDownload">
       <div className="logoMensagem">
@@ -43,7 +41,6 @@ const Home = () => {
       </div>
     </div>
   </>
-  )
-}
+)
 
 export default Home;

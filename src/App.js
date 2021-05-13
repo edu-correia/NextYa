@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from './Layouts/NavBar'
 import Main from './Layouts/Main'
-import Session from './Layouts/Session'
+import Content from './Layouts/Content'
 import Footer from './Layouts/Footer'
 
 
@@ -15,7 +15,7 @@ export default ()=>{
       <>
           <Main/>
           <Navbar/>
-          <Session/>
+          <Content/>
           <Footer/>
       </>
 
