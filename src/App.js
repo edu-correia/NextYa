@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import Navbar from './Components/NavBar'
-import Main from './Components/Main'
-import Session from './Components/Session'
-import Footer from './Components/Footer'
+import Navbar from './Layouts/NavBar'
+import Main from './Layouts/Main'
+import Content from './Layouts/Content'
+import Footer from './Layouts/Footer'
 
 
 export default ()=>{
@@ -15,9 +15,8 @@ export default ()=>{
       <>
           <Main/>
           <Navbar/>
-          <Session/>
+          <Content/>
           <Footer/>
-          
       </>
 
     )
