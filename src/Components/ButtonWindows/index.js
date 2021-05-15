@@ -6,7 +6,7 @@ import './button.scss';
 const ButtonWindows = () => {
     return(
         <>
-            <Button variant="contained" className="buttonWindows">
+            <Button variant="contained" className="buttonWindows" href="/">
                 <DiWindows className="icon"/> Windows
             </Button>
         </>

@@ -6,14 +6,13 @@ button{
         width: 4rem;
         height: 4rem;
         color: #AE03FF;
-        margin-left: 0;
-        padding: 0;
-    }
+        
+    } 
 }
 
 .list{
     width: 30vw;
-    
+    z-index: 5;
     p{
         font-family: Lexend Deca;
         color: #000;

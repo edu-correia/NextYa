@@ -1,6 +1,6 @@
-import Logo from '../../Assets/logo01.png';
-import Motoqueiro from '../../Assets/motoBoy.png';
-import Cozinheiro from '../../Assets/cozinheiro.png';
+import Logo from '../../Assets/logo01.svg';
+import Motoqueiro from '../../Assets/motoBoy.svg';
+import Cozinheiro from '../../Assets/Cozinheiro.svg';
 import ButtonAndroid from '../../Components/ButtonAndroid/';
 import ButtonWindows from '../../Components/ButtonWindows/';
 import './session.scss';
@@ -12,7 +12,9 @@ const Home = () => (
     <Box className="sessionDownload">
       <Box className="logoMensagem">
         <img src={Logo} alt="Logo"/>
-        <h1>Faça Download do nosso app</h1>
+        <Box className="text" p={{xs:"1rem", sm:"1rem"}}>
+          <h1>Venha conhecer nosso aplicativo</h1>
+        </Box>
       </Box>
 
       <Box
@@ -24,9 +26,9 @@ const Home = () => (
       >
         <Box 
           order={1}
-          paddingRight="15px"
+          marginRight={{md:"15px",lg:"15px", xl:"15px"}}   
         >
-          <ButtonAndroid/>
+          <ButtonAndroid />
         </Box>
 
         <Hidden smDown>
@@ -41,20 +43,22 @@ const Home = () => (
     <Box 
       className="sessionInfo"
       flexDirection={{xs:'column', sm:'column', md:'row', lg:'row'}}
-      p={{xs:1, sm:2, md:3, lg:4}}
     >
       <Box className="infoMotoqueiro" order={1}>
         <img src={Motoqueiro} alt="Logo"/>
-        <Box>
+        <Box paddingRight="1rem">
           <h1>Ganhe entregando</h1>
           <p>Faça entregas usando nossa plataforma</p>
         </Box>
       </Box>
       <Box className="infoRestaurante" order={2} flexDirection={{xs:'row-reverse', sm:'row-reverse', md:'row', lg:'row'}}>
         <img src={Cozinheiro} alt="Logo"/>
-        <Box>
-          <h1>Entrega rapida</h1>
-          <p>Solicite e ofereça entregas rapidas aos seus clientes</p>
+        <Box 
+          className="infoTextRestaurante"
+          marginRight={{xs:"3.5rem", sm:"2rem"}}
+        >
+          <h1>Entrega rápida</h1>
+          <p>Solicite e ofereça entregas rápidas aos seus clientes</p>
         </Box>
       </Box>
     </Box>

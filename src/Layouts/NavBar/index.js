@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Logo from '../../Assets/NextYa.png'
+import Logo from '../../Assets/NextYa.svg'
 import './navbar.scss'
 import DrawerComponent from './DrawerComponent/DrawerComponent.js'
 import { Hidden, Box} from '@material-ui/core/'
+
 
 
 export default ()=>{
@@ -23,27 +24,27 @@ export default ()=>{
     return(
 
         <>
+            
             <Box className={navbar? 'active':'navbar'} justifyContent={{lg:"space-between", xl:"space-between"}}>
-                <DrawerComponent/>
-                <Box 
-                    display={{sm:"inline-block"}}
-                    marginRight={{xs:"auto",sm:"auto", md:0, lg:0, xl:0}}
-                    marginLeft={{xs:"auto",sm:"auto", md:"1.9rem", lg:"1.9rem", xl:"1.9rem"}}
-                >
+                <Hidden mdUp>
+                    <Box flexGrow={1}>
+                        <DrawerComponent/>
+                    </Box>
+                </Hidden>
+                <Box marginLeft={{md:"1.9rem", lg:"1.9rem", xl:"1.9rem"}} className="header--logo" flexGrow={{xs:2, sm:2}}>
                     <a href="/">
                         <img src={Logo} alt="logo" />
                     </a>
                 </Box>
-
                <Hidden smDown>
-                    <Box className="header--cadastro">
-                        <a href="/">Cadastro</a>
-                    </Box>
-
                     <Box className="header--entrar">
                         <a href="/">Entrar</a>
                     </Box>
+                    <Box className="header--cadastro">
+                        <a href="/">Cadastro</a>
+                    </Box>
                </Hidden>
+
             </Box>
             
         </>

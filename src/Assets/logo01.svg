@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 170 170">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ae03ff;
+      }
+
+      .cls-2, .cls-3 {
+        font-size: 48px;
+        text-anchor: middle;
+        font-family: Lexend;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="Retângulo_Arredondado_1" data-name="Retângulo Arredondado 1" class="cls-1" width="170" height="170" rx="50" ry="50"/>
+  <text id="Next" class="cls-2" x="85" y="79"><tspan x="85">Next</tspan></text>
+  <text id="Ya" class="cls-3" x="84" y="120"><tspan x="84">Ya</tspan></text>
+</svg>

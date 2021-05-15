@@ -1,6 +1,6 @@
 import React from 'react';
 import BackgroundVideo from '../../Assets/video/Backgroundvideo.webm'
-import Seta from '../../Assets/seta.png'
+import Seta from '../../Assets/Seta.svg'
 import './main.scss'
 
 export default()=>{

@@ -6,7 +6,7 @@ import './button.scss';
 const ButtonAndroid = () => {
     return(
         <>
-            <Button variant="contained" className="buttonAndroid">
+            <Button variant="contained" className="buttonAndroid" href="/">
                 <DiAndroid className="icon"/> Android
             </Button>
         </>

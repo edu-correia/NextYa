@@ -5,7 +5,7 @@
     top: 0;
     left: 50%;
     margin-left: -40vw;
-
+    
 
     display: flex;
     align-items: center;
@@ -14,6 +14,7 @@
     font-family: Lexend Deca;
     font-size: 2rem;
     transition: all ease 0.5s;
+    z-index: 4;
 
     .header--logo{
         margin-left: 1.9rem;
@@ -32,8 +33,8 @@
     }
 
     .header--entrar{
-       position: absolute;
-       right: 5rem;
+        position: absolute;
+        right: 5rem;
        a{
             color: #000;
 
@@ -63,6 +64,7 @@
     font-family: Lexend Deca;
     font-size: 2rem;
     transition: all ease 0.5s;
+    z-index: 4;
 
     .header--logo{
         margin-left: 1.9rem;
@@ -81,8 +83,9 @@
     }
 
     .header--entrar{
-       position: absolute;
-       right: 5rem;
+        position: absolute;
+        right: 5rem;
+        
        a{
             color: #000;
 
@@ -90,5 +93,21 @@
                 text-decoration: none;
             }
         }
+
     }
+}
+
+@media (max-width:600px),(max-width:960px){
+    .navbar{
+        width: 100vw;
+        left: 0;
+        margin-left: 0;
+        
+    }
+    .active{
+        width: 100vw;
+        left: 0;
+        margin-left: 0;
+    }
+
 }
