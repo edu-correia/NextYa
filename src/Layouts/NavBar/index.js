@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Logo from '../../Assets/NextYa.svg'
 import './navbar.scss'
-import DrawerComponent from './DrawerComponent/DrawerComponent.js'
+import DrawerComponent from '../../Components/DrawerComponent/DrawerComponent.js'
 import { Hidden, Box} from '@material-ui/core/'
 
 
