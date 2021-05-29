@@ -3,7 +3,7 @@ import Logo from '../../Assets/NextYa.svg'
 import './navbar.scss'
 import DrawerComponent from '../../Components/DrawerComponent/DrawerComponent.js'
 import { Hidden, Box} from '@material-ui/core/'
-
+import { Link } from 'react-router-dom'
 
 
 export default ()=>{
@@ -38,10 +38,10 @@ export default ()=>{
                 </Box>
                <Hidden smDown>
                     <Box className="header--entrar">
-                        <a href="/">Entrar</a>
+                        <Link to="/Login">Entrar</Link>
                     </Box>
                     <Box className="header--cadastro">
-                        <a href="/">Cadastro</a>
+                        <Link to="/Cadastro">Cadastro</Link>
                     </Box>
                </Hidden>
 
