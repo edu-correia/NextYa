@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    
+
+    .logo{
+        width: 7.5rem;
+        padding-bottom: 15px;
+    }
+
+    .info{
+        text-align: center;
+        width: 75vw;
+        padding-bottom: 20px;
+        h1{
+            font-family: Lexend Deca;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+        p{
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 1.25rem;
+        }
+    }
+
+    .form{
+        text-align: center;          
+        input{
+            display: inline-block;
+            width: 16rem;
+            height: 2rem;
+            margin-bottom: 10px;
+            border: 1px solid #ADADAD;
+            color: #9c9c9c;
+            font-family: Inter;
+            font-size: 1rem;
+            padding-left: 3px;
+        }
+        .btnNext{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width:960px),(min-width:1920px){
+    .form{
+        width: 40%;
+    }
+}
+
+@media (min-width: 1024px){
+    .form{
+        width: 55%;
+    }
+}
+
+@media (min-width: 2560px){
+    .form{
+        width: 22%;
+    }
+}
+
