@@ -1,8 +1,7 @@
 import Logo from '../../Assets/logo01.svg';
 import Motoqueiro from '../../Assets/motoBoy.svg';
 import Cozinheiro from '../../Assets/Cozinheiro.svg';
-import ButtonAndroid from '../../Components/ButtonAndroid';
-import ButtonWindows from '../../Components/ButtonWindows';
+import { ButtonAndroid, ButtonWindows } from '../../Components/ButtonPlataformas';
 import './session.scss';
 import Box from '@material-ui/core/Box';
 import Hidden from '@material-ui/core/Hidden';
@@ -28,12 +27,12 @@ const Session = () => (
           order={1}
           marginRight={{md:"15px",lg:"15px", xl:"15px"}}   
         >
-          <ButtonAndroid/>
+          <ButtonAndroid endereco="/" text="Android"/>
         </Box>
 
         <Hidden smDown>
           <Box order={2}>
-            <ButtonWindows/>
+            <ButtonWindows endereco="/" text="Windows"/>
           </Box>
         </Hidden>
       </Box>

@@ -1,12 +1,12 @@
-import { Box } from '@material-ui/core';
 import React from 'react';
+import { Box } from '@material-ui/core';
 import BackArrow from '../../Components/BackArrow'
 import Logo from '../../Assets/logo01.svg'
 import Motoboy from '../../Assets/motoBoy.svg'
 import Cozinheiro from '../../Assets/Cozinheiro.svg'
-import BtnMotoqueiro from '../../Components/ButtonMotoqueiro'
-import BtnRestaurante from '../../Components/ButtonRestaurante'
+import BtnCadastro from '../../Components/ButtonEscolhaCadastro'
 import { Link } from 'react-router-dom'
+import { BoasVindas } from '../../Components/BoasVindas';
 import './style.scss'
 const escolhaCadastro = () => {
     return(
@@ -17,28 +17,21 @@ const escolhaCadastro = () => {
             </Link>
 
             <Box className="conteudo">
-                <Box>
-                    <img src={Logo} alt="Logo" className="logo"/>
-                </Box>
 
-                <Box className="info">
-                    <h1>Bem vindo!</h1>
-                    <p>Escolha como deseja fazer seu cadastro:</p>
-                </Box>
+                <BoasVindas title="Bem vindo!" mensage="Escolha como deseja fazer seu cadastro:"/>
     
                 <Box 
                     className="opcoes">
                     <Box className="motoboy">
                         <img src={Motoboy} alt="motoboy"/>
                         <Link to="/">
-                            <BtnMotoqueiro/>
+                            <BtnCadastro text="Motoqueiro"/>
                         </Link>
                     </Box>
                     <Box className="cozinheiro">
                         <img src={Cozinheiro} alt="Cozinheiro"/>
-
                         <Link to="/Cadastro/Proprietario">
-                            <BtnRestaurante/>
+                            <BtnCadastro text="Restaurante"/>
                         </Link>
                     </Box>  
                 </Box>

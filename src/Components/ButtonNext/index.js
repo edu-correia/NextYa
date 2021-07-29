@@ -19,10 +19,10 @@ const ButtonAvancar = withStyles(() => ({
     }
 }))(Button);
 
-const ButtonNext = ()=>{
+const ButtonNext = (props)=>{
     return(
-        <ButtonAvancar type="submit">
-            Avançar
+        <ButtonAvancar type={props.tipo}>
+            {props.text}
         </ButtonAvancar>
     )
 }

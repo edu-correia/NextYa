@@ -10,50 +10,32 @@
     margin-top: 15px;
     
 
-    .logo{
-        width: 7.5rem;
-        padding-bottom: 15px;
-    }
-
-    .info{
-        text-align: center;
-        width: 75vw;
-        padding-bottom: 20px;
-        h1{
-            font-family: Lexend Deca;
-            font-weight: 400;
-            font-size: 1.5rem;
-        }
-        p{
-            font-family: Inter;
-            font-weight: 400;
-            font-size: 1.25rem;
-        }
-    }
-
     .form{
-        text-align: center;          
+        text-align: center;
+        padding-bottom: 20px;
+        
         input{
             display: inline-block;
+            margin-bottom: 10px;
+            padding-left: 3px;
             width: 16rem;
             height: 2rem;
-            margin-bottom: 10px;
             border: 1px solid #ADADAD;
             color: #9c9c9c;
             font-family: Inter;
             font-size: 1rem;
-            padding-left: 3px;
-
         }
-
+        
+        
         textArea{
             max-width: 16rem;
             max-height: 4rem;
 
             min-width: 16rem;
-            min-height: 4rem;
+            min-height: 8rem;
+
             
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
             border: 1px solid #ADADAD;
             color: #9c9c9c;
             font-family: Inter;
@@ -64,9 +46,16 @@
         .btnNext{
             display: flex;
             justify-content: center;
-            margin-top: 10px;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
+    }
+}
+
+
+@media (min-width: 450px){
+    .campoImagem{
+        flex-direction: column;
     }
 }
 

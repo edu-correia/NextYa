@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Drawer from '@material-ui/core/Drawer'
-import { List, ListItem, ListItemIcon, ListItemText, Hidden, withStyles} from '@material-ui/core'
+import { List, ListItem, ListItemIcon, ListItemText, Hidden, } from '@material-ui/core'
 import { BiMenu } from 'react-icons/bi'
 import './DrawerComponent.scss'
 import { Link } from 'react-router-dom'
@@ -31,7 +31,7 @@ const DrawerComponent = () => {
                     </ListItem>
                     <ListItem button onClick={()=> setOpenDrawer(false)}>
                         <ListItemIcon>
-                            <Link to="/cadastro">
+                            <Link to="/cadastro" className="link">
                                 <ListItemText><p>Cadastro</p></ListItemText>
                             </Link>
                         </ListItemIcon>

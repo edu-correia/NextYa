@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { DiAndroid } from 'react-icons/di';
+import { DiWindows } from 'react-icons/di';
 import { makeStyles } from '@material-ui/core/styles'
 
 
@@ -31,15 +32,25 @@ const useStyles = makeStyles({
 });
 
 
-const ButtonAndroid = () => {
+export function ButtonAndroid(props){
     const classes = useStyles();
     return(
         <>
-            <Button className={classes.buttonStyles} href="/">
-                <DiAndroid className={classes.icon}/> Android
+            <Button className={classes.buttonStyles} href={props.endereco}>
+                <DiAndroid className={classes.icon}/> {props.text}
             </Button>
         </>
     )
 }
 
-export default ButtonAndroid;
+
+export function ButtonWindows(props){
+    const classes = useStyles();
+    return(
+        <>
+            <Button className={classes.buttonStyles} href={props.endereco}>
+                <DiWindows className={classes.icon}/> {props.text}
+            </Button>
+        </>
+    )
+}

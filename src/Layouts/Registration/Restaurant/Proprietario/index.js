@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import Logo from '../../../../Assets/logo01.svg';
+import { useHistory } from 'react-router'
+import { BoasVindas } from '../../../../Components/BoasVindas';
 import BackArrow from '../../../../Components/BackArrow';
 import Grid from '@material-ui/core/Grid';
 import ButtonNext from '../../../../Components/ButtonNext';
 import Axios from 'axios';
 import './proprietario.scss';
 import { Link } from 'react-router-dom';
+
 
 const initialValue = {
     cpf: '',
@@ -47,17 +48,8 @@ const Restaurant = () => {
         </Link>
 
             <div className="container-cadastro">
-                
-                <img src={Logo} alt="logo" className="logo"/>
-                
-                <div className="info">
-                    <h1>Bem vindo!</h1>
-                    <br/>
-                    <p>Digite os dados solicidados para efetuar seu cadastro</p>
-                    <br/>
-                    <p>Dados do proprietário:</p>
-                </div>
-            
+
+                <BoasVindas title="Bem vindo!" mensage="Digite os dados solicitados para efetuar o cadastro" info="Dados do proprietário:"/>
 
                 <div className="form">
                     <form onSubmit={onSubmit}>
@@ -82,7 +74,7 @@ const Restaurant = () => {
                             </Grid>
                         </Grid>
                         <div className="btnNext">
-                            <ButtonNext className="btnNext"/>
+                            <ButtonNext className="btnNext" text="Avançar" tipo="submit"/>
                         </div>
                     </form>
                 </div>

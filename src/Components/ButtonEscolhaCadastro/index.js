@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react'
 import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
 
 
-
-const ButtonRestaurant = withStyles(() => ({
+const BtnEscolhaCadastro = withStyles(() => ({
     root: {
         backgroundColor: '#AE03FF',
         color: '#fff',
@@ -17,7 +16,6 @@ const ButtonRestaurant = withStyles(() => ({
         transition: 'all ease-in 0.2s',
         
 
-        
         '&:hover': {
             boxShadow:'0px 6px 10px rgba(0, 0, 0, 0.30)',
             backgroundColor: '#AE03FF',
@@ -25,14 +23,16 @@ const ButtonRestaurant = withStyles(() => ({
 
     },
 }))(Button);
-const ButtonRestaurante = () => {
+
+const Btn = (props) => {
+    
     return(
         <>
-            <ButtonRestaurant>
-                Restaurante
-            </ButtonRestaurant>
+            <BtnEscolhaCadastro>
+                {props.text}
+            </BtnEscolhaCadastro>
         </>
     )
 }
 
-export default ButtonRestaurante
+export default Btn

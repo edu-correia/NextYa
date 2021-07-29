@@ -1,0 +1,25 @@
+.finalPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40vh;
+    
+    
+
+    .logo--finalPage{
+        width: 15rem;
+        padding: 15px;
+    }
+
+    p{
+        font-family: "Inter";
+        font-size: 1.3em;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .btn--link{
+        text-decoration: none;
+    }
+}
