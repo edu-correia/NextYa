@@ -1,5 +1,5 @@
 import Logo from '../../../Assets/NextYa.svg'
-import Button from '../../../Components/ButtonNext'
+import Button from '../../../Components/ButtonGeneric'
 import './style.scss'
 import { Link } from 'react-router-dom'
 
@@ -19,7 +19,7 @@ const FinalPage = () => {
 
                 <div>
                     <Link to="/" className="btn--link">
-                        <Button text="voltar ao inicio" tipo="button" className="btnVoltar"/>
+                        <Button text="voltar ao inicio" tipo="button" className="btnVoltar" altura="3rem" largura="15rem"/>
                     </Link>
                 </div>
             </div>

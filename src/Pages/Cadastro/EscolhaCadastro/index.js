@@ -1,9 +1,10 @@
 import React from 'react';
-import ChoiceRegistration from '../../../Layouts/ChoiceRegistration'
+import OpcoesCadastro from '../../../Layouts/OpçõesCadastro'
+
 export default ()=>{
     return(
         <>
-            <ChoiceRegistration/>
+            <OpcoesCadastro/>
         </>
     );
 }

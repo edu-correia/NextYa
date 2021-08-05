@@ -4,8 +4,7 @@ import Axios from 'axios';
 import BackArrow from '../../../../Components/BackArrow';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import ButtonNext from '../../../../Components/ButtonNext';
-import ButtonUpload from '../../../../Components/ButtonUpload';
+import ButtonNext from '../../../../Components/ButtonGeneric';
 import './restaurante.scss';
 import { BoasVindas } from '../../../../Components/BoasVindas';
 
@@ -94,7 +93,7 @@ const Restaurante = () => {
                         </Grid>
                         
                         <div>
-                            <ButtonNext className="btnNext" text="Avançar"/>
+                            <ButtonNext className="btnNext" text="Avançar" altura="3rem" largura="15rem"/>
                         </div>
                     </form>
                 </div>

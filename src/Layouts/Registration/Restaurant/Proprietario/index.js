@@ -3,7 +3,7 @@ import { useHistory } from 'react-router'
 import { BoasVindas } from '../../../../Components/BoasVindas';
 import BackArrow from '../../../../Components/BackArrow';
 import Grid from '@material-ui/core/Grid';
-import ButtonNext from '../../../../Components/ButtonNext';
+import ButtonNext from '../../../../Components/ButtonGeneric';
 import Axios from 'axios';
 import './proprietario.scss';
 import { Link } from 'react-router-dom';
@@ -74,7 +74,7 @@ const Restaurant = () => {
                             </Grid>
                         </Grid>
                         <div className="btnNext">
-                            <ButtonNext className="btnNext" text="Avançar" tipo="submit"/>
+                            <ButtonNext className="btnNext" text="Avançar" tipo="submit" altura="3rem" largura="15rem"/>
                         </div>
                     </form>
                 </div>
