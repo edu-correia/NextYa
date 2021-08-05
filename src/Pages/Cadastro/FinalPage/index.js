@@ -1,4 +1,4 @@
-import FinalPage from '../../../Layouts/Registration/FinalPageCadastro'
+import FinalPage from '../../../Layouts/Cadastro/FinalPageCadastro'
 
 const UltimaPagina = () =>{
     return(

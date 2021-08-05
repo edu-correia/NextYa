@@ -18,25 +18,27 @@ const initialValue = {
     senha: '',
 };
 
-const Restaurant = () => {
+
+
+export const Proprietario = () => {
 
     const [values, setValues] = useState(initialValue);
     const history = useHistory();
 
     function onChange(ev){
         const{name, value} = ev.target;
-
         setValues({ ...values, [name]: value});
+        
     }
 
     function onSubmit(ev){
         ev.preventDefault(); 
-
-        Axios.post('http://localhost:4000/usuarios/cadastro/proprietario', values)
+        history.push('/Cadastro/Teste')
+        /* Axios.post('http://localhost:4000/usuarios/cadastro/proprietario', values)
             .then((response) => {
                 console.log(response);
                 history.push('/Cadastro/Proprietario/Restaurante');
-            });
+            }); */
 
     }
 
@@ -84,4 +86,3 @@ const Restaurant = () => {
     )
 };
 
-export default Restaurant;

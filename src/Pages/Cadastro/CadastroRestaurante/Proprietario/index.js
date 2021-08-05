@@ -1,8 +1,8 @@
 import React from 'react';
-import CadastroRestaurat from '../../../../Layouts/Registration/Restaurant/Proprietario';
+import { Proprietario } from '../../../../Layouts/Cadastro/Restaurante/Restaurante'
 
 export default () => {
     return(
-        <CadastroRestaurat/>
+        <Proprietario/>
     );
 };
