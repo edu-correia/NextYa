@@ -1,12 +1,8 @@
-import React from 'react';
-import { Restaurante } from '../../../../Layouts/Cadastro/Restaurante/Restaurante';
+import React from 'react'
+import { Restaurante } from '../../../../Layouts/Cadastro/Cadastro/index'
 
-export default () => {
+export default () =>{
     return(
-
-        <>
-            <Restaurante/>
-        </>
-
-    );
+        <Restaurante/>
+    )
 }

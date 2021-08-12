@@ -1,8 +1,8 @@
-import React from 'react';
-import { Proprietario } from '../../../../Layouts/Cadastro/Restaurante/Restaurante'
+import React from 'react'
+import {Proprietario} from '../../../../Layouts/Cadastro/Cadastro'
 
-export default () => {
+export default ()=>{
     return(
         <Proprietario/>
-    );
-};
+    )
+}

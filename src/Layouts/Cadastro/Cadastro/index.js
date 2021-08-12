@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import {CadastroRestaurante} from '../../../../Controller/restaurante-controller'
-import BackArrow from '../../../../Components/BackArrow';
+import Axios from 'axios';
+import BackArrow from '../../../Components/BackArrow';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import ButtonNext from '../../../../Components/ButtonGeneric';
+import ButtonNext from '../../../Components/ButtonGeneric';
 import './restaurante.scss';
 import './proprietario.scss';
-import { BoasVindas } from '../../../../Components/BoasVindas';
+import { BoasVindas } from '../../../Components/BoasVindas';
+import { ProprietarioContext } from '../../../AppContext/Context';
+import CadastroRestaurante from '../../../Controller/restaurante-controller';
 
 
-
+/* 
 const restauranteValue ={
     nomeRestaurante: '',
     telefone: '',
@@ -21,7 +23,7 @@ const restauranteValue ={
     descricao: '',
     complemento: '',
 }
-
+*/
 const proprietarioValue = {
     nome: '',
     cnpj: '',
@@ -30,30 +32,25 @@ const proprietarioValue = {
     telefone: ''
 };
 
-function Post(){
-    <CadastroRestaurante proprietarioValues={proprietarioValue} restauranteValues={restauranteValue}/>
-    console.log(CadastroRestaurante)
-}
+
+
+
+
 
 export const Proprietario = () => {
-
-    const [values, setValues] = useState(proprietarioValue);
-    const history = useHistory();
-
+    
+    const {setToDados} = useContext(ProprietarioContext);
+    const[values, setValues] = useState(proprietarioValue);
+    
     function onChange(ev){
         const{name, value} = ev.target;
-        setValues({ ...values, [name]: value});
-        
+        setValues({...values, [name]: value});
     }
-
+    
     function onSubmit(ev){
         ev.preventDefault(); 
-        history.push('/Cadastro/Restaurante')
-        /* Axios.post('http://localhost:4000/usuarios/cadastro/proprietario', values)
-            .then((response) => {
-                console.log(response);
-                history.push('/Cadastro/Proprietario/Restaurante');
-            }); */
+        setToDados(values);
+        CadastroRestaurante();
 
     }
 
@@ -104,18 +101,15 @@ export const Proprietario = () => {
 
 export const Restaurante = () => {
 
-
-    const [values, setValues] = useState(restauranteValue);
     const history = useHistory();
 
     function onChange(ev){
         const{name, value} = ev.target;
-        setValues({ ...values, [name]: value});
+/*         setValues({ ...values, [name]: value}); */
     }
 
     function onSubmit(ev){
-    ev.preventDefault(); 
-    Post();
+        ev.preventDefault(); 
     /* Axios.post('http://localhost:4000/restaurante/cadastro', values)
         .then((response) => {
             console.log(response);
@@ -166,8 +160,13 @@ export const Restaurante = () => {
                             </Grid>
 
                             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                                <input type="file" required name="fotorestaurante" id="selecao-arquivo" accept="image/png, image/jpeg" className="inputFile"/> 
+                            </Grid>
+
+                            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                                 <textarea required name="descricao" placeholder="Breve descrição" onChange={onChange} />
                             </Grid>
+
                             
                         </Grid>
                         
@@ -181,4 +180,3 @@ export const Restaurante = () => {
         </>
     )
 }
-

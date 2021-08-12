@@ -1,12 +1,17 @@
+import { useContext } from 'react';
 import Axios from 'axios';
+import { useHistory } from 'react-router-dom';
+import { ProprietarioContext } from '../AppContext/Context';
 
-export function CadastroRestaurante({proprietarioValues, restauranteValues}){
-    Axios.post('http://localhost:4000/proprietario/cadastro/proprietario', proprietarioValues)
-        .then((response) => {
-            console.log(response);
-            Axios.post('http://localhost:4000/restaurante/cadastro', restauranteValues)
-                .then((response) => {
-                    return (console.log(response))
-                })
-        }) 
+
+export default function CadastroRestaurante(){
+
+    const {proprietario} = useContext(ProprietarioContext);
+    const History = useHistory();
+
+    {(proprietario && !proprietario.dados) && (
+        History.push('/')
+    )}
+    History.push('/cadastro/verificacao')
+
 }
