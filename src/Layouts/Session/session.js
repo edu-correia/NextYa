@@ -10,6 +10,9 @@ import { ProprietarioContext } from '../../AppContext/Context';
 
 const Session = () => {
 
+  const user = useContext(ProprietarioContext);
+  console.log(user)
+
   return(
       <>
       <Box className="sessionDownload">
@@ -50,6 +53,7 @@ const Session = () => {
         <Box className="infoMotoqueiro" order={1}>
           <img src={Motoqueiro} alt="Logo"/>
           <Box paddingRight="1rem">
+
             <h1>Ganhe entregando</h1>
             <p>Faça entregas usando nossa plataforma</p>
           </Box>

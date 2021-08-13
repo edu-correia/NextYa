@@ -34,14 +34,12 @@ const proprietarioValue = {
 
 
 
-
-
-
 export const Proprietario = () => {
     
     const {setToDados} = useContext(ProprietarioContext);
     const[values, setValues] = useState(proprietarioValue);
-    
+    const {proprietario} = useContext(ProprietarioContext);
+    const history = useHistory()
     function onChange(ev){
         const{name, value} = ev.target;
         setValues({...values, [name]: value});
@@ -50,8 +48,7 @@ export const Proprietario = () => {
     function onSubmit(ev){
         ev.preventDefault(); 
         setToDados(values);
-        CadastroRestaurante();
-
+        history.push('/teste');
     }
 
     return(

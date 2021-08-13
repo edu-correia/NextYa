@@ -6,6 +6,7 @@ import EscolhaCadastro from '../Pages/Cadastro/EscolhaCadastro'
 import CadastroProprietario from '../Pages/Cadastro/CadastroRestaurante/Proprietario'
 import CadastroRestaurante from '../Pages/Cadastro/CadastroRestaurante/Restaurante'
 import FinalPage from '../Pages/Cadastro/FinalPage'
+import ControllerRestaurante from '../Controller/restaurante-controller'
 import { ProprietarioProvider } from '../AppContext/Provider'
 
 const Routes = () => {
@@ -23,6 +24,7 @@ const Routes = () => {
                         <Route path="/Cadastro/Proprietario" component={CadastroProprietario} exact/>
                         <Route path="/Cadastro/Restaurante" component={CadastroRestaurante}/>
                         <Route path="/Cadastro/Verificacao" component={FinalPage}/>
+                        <Route path="/teste" component={ControllerRestaurante}/>
                     </Switch>
                 </BrowserRouter>
             </ProprietarioProvider>

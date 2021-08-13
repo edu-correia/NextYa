@@ -5,13 +5,19 @@ import { ProprietarioContext } from '../AppContext/Context';
 
 
 export default function CadastroRestaurante(){
-
+    const history = useHistory();
     const {proprietario} = useContext(ProprietarioContext);
-    const History = useHistory();
+    console.log(proprietario)
+    
+    function rota(){
+        history.push('/Cadastro/Verificacao')
+    }
 
-    {(proprietario && !proprietario.dados) && (
-        History.push('/')
-    )}
-    History.push('/cadastro/verificacao')
+    
+    window.onload = rota()
+
+    return(
+        <span>Teste</span>
+    )
 
 }
