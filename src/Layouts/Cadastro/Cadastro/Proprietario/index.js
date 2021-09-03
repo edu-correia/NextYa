@@ -1,13 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import Axios from 'axios';
 import BackArrow from '../../../../Components/BackArrow';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import ButtonNext from '../../../../Components/ButtonGeneric';
 import './proprietario.scss';
 import { BoasVindas } from '../../../../Components/BoasVindas';
-import { ProprietarioContext } from '../../../../AppContext/Context';
+import { Context } from '../../../../AppContext/Context';
 
 
 
@@ -23,7 +22,7 @@ const proprietarioValue = {
 
 const Proprietario = () => {
     
-    const {setToDados} = useContext(ProprietarioContext);
+    const {setToDadosProprietario} = useContext(Context);
     const[values, setValues] = useState(proprietarioValue);
     const history = useHistory();
 
@@ -35,7 +34,7 @@ const Proprietario = () => {
     
     function onSubmit(ev){
         ev.preventDefault(); 
-        setToDados(values);
+        setToDadosProprietario(values);
         history.push('/Cadastro/Restaurante');
     }
 

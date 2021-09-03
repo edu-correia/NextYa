@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import Logo from '../../Assets/logo01.svg';
 import Motoqueiro from '../../Assets/motoBoy.svg';
 import Cozinheiro from '../../Assets/Cozinheiro.svg';
@@ -6,12 +5,9 @@ import { ButtonAndroid, ButtonWindows } from '../../Components/ButtonPlataformas
 import './session.scss';
 import Box from '@material-ui/core/Box';
 import Hidden from '@material-ui/core/Hidden';
-import { ProprietarioContext } from '../../AppContext/Context';
+
 
 const Session = () => {
-
-  const user = useContext(ProprietarioContext);
-  console.log(user)
 
   return(
       <>

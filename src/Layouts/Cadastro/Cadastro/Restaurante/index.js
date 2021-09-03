@@ -6,24 +6,24 @@ import Grid from '@material-ui/core/Grid';
 import ButtonNext from '../../../../Components/ButtonGeneric';
 import './restaurante.scss';
 import { BoasVindas } from '../../../../Components/BoasVindas';
-import { RestauranteContext } from '../../../../AppContext/Context';
+import { Context } from '../../../../AppContext/Context';
 
 
 const restauranteValue = {
-    nomeRestaurante: '',
+    nome: '',
     telefone: '',
     cep: '',
     rua: '',
     bairro: '',
     numero: 0,
     descricao: '',
-    fotoRestaurante: '',
     complemento: '',
+    fotorestaurante: null,
 }
 
 const Restaurante = () => {
 
-    const {setToDados} = useContext(RestauranteContext);
+    const {setToDadosRestaurante} = useContext(Context);
     const [values, setValues] = useState(restauranteValue);
     const history = useHistory();
 
@@ -33,14 +33,20 @@ const Restaurante = () => {
         setValues({...values, [name]: value});
     }
 
-    function onSubmit(ev){
-        ev.preventDefault(); 
-        setToDados(values);
-        history.push('/teste')
-    
+    function upload(ev){
+        let file = ev.target.files[0];
+        let formData = new FormData();
+
+        formData.append('fotorestaurante', file);
+        setValues({...values, 'fotorestaurante':formData.get('fotorestaurante')});
     }
 
-
+    function onSubmit(ev){
+        ev.preventDefault(); 
+        setToDadosRestaurante(values);
+        history.push('/Post/Proprietario')
+    
+    }
 
     return(
         <>
@@ -81,9 +87,9 @@ const Restaurante = () => {
                             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                                 <input className="camposCadastro" name="complemento" type="text" placeholder="Complemento(opcional)" onChange={onChange} />
                             </Grid>
-
+                            
                             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                                <input type="file" required name="fotorestaurante" id="selecao-arquivo" accept="image/png, image/jpeg" className="inputFile"/> 
+                                <input type="file" className="inputFile"  name="fotorestaurante" onChange={upload}/>
                             </Grid>
 
                             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>

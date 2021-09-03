@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { ProprietarioContext, RestauranteContext } from "./Context";
+import { Context } from "./Context";
 
 const defaultProprietario = {
-    dados: {
+    dadosProprietario: {
         nome: '',
         cnpj: '',
         email: '',
@@ -12,27 +12,27 @@ const defaultProprietario = {
 }
 
 const defaultRestaurante = {
-    dados:{
-        nomeRestaurante: '',
+    dadosRestaurante:{
+        nome: '',
         telefone: '',
         cep: '',
         rua: '',
         bairro: '',
         numero: 0,
         descricao: '',
-        fotorestaurante: '',
-        complemento: '',
+        fotorestaurante: null,
+        complemento: ''
     }
 }
 
 
 
-export const ProprietarioProvider = ({children}) =>{
+export const Provider = ({children}) =>{
     const[proprietario, setProprietario] = useState(defaultProprietario);
 
-    function setToDados(DadosProprietario){
+    function setToDadosProprietario(DadosProprietario){
         setProprietario({
-            dados: {
+            dadosProprietario: {
                 nome: DadosProprietario.nome,
                 cnpj: DadosProprietario.cnpj,
                 email: DadosProprietario.email,
@@ -40,23 +40,14 @@ export const ProprietarioProvider = ({children}) =>{
                 telefone: DadosProprietario.telefone
             }
         })
-        
     }
 
-    return(
-        <ProprietarioContext.Provider value={{proprietario, setToDados}}>
-            {children}
-        </ProprietarioContext.Provider>
-    )
-}
-
-export const RestauranteProvider = ({children}) => {
     const[restaurante, setRestaurante] = useState(defaultRestaurante);
 
-    function setToDados(DadosRestaurante){
+    function setToDadosRestaurante(DadosRestaurante){
         setRestaurante({
-            dados: {
-                nomeRestaurante: DadosRestaurante.nomeRestaurante,
+            dadosRestaurante: {
+                nome: DadosRestaurante.nome,
                 telefone: DadosRestaurante.telefone,
                 cep: DadosRestaurante.cep,
                 rua: DadosRestaurante.rua,
@@ -70,8 +61,9 @@ export const RestauranteProvider = ({children}) => {
     }
 
     return(
-        <RestauranteContext.Provider value={{restaurante, setToDados}}>
+        <Context.Provider value={{proprietario, setToDadosProprietario, restaurante, setToDadosRestaurante}}>
             {children}
-        </RestauranteContext.Provider>
+        </Context.Provider>
     )
 }
+

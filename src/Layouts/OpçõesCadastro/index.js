@@ -23,7 +23,7 @@ const escolhaCadastro = () => {
                     className="opcoes">
                     <Box className="motoboy">
                         <img src={Motoboy} alt="motoboy"/>
-                        <Link className="Link" to="/">
+                        <Link className="Link" to="/Cadastro/Motoqueiro">
                             <BtnCadastro text="Motoqueiro" altura="3rem" largura="9rem"/>
                         </Link>
                     </Box>

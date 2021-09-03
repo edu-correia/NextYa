@@ -1,12 +1,10 @@
 import { createContext } from "react";
 
 
-export const ProprietarioContext = createContext({
-    dados: null,
-    setToDados: () => {}
+export const Context = createContext({
+    dadosProprietario: null,
+    setToDadosProprietario: () => {},
+    dadosRestaurante: null,
+    setToDadosRestaurante: () => {},
 })
 
-export const RestauranteContext = createContext({
-    dados: null,
-    setToDados: () => {}
-})

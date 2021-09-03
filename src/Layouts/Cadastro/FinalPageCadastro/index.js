@@ -2,12 +2,12 @@ import Logo from '../../../Assets/NextYa.svg'
 import Button from '../../../Components/ButtonGeneric'
 import './style.scss'
 import { Link } from 'react-router-dom'
-import { RestauranteContext } from '../../../AppContext/Context'
+import { Context } from '../../../AppContext/Context'
 import { useContext } from 'react'
 
 const FinalPage = () => {
 
-    const {restaurante} = useContext(RestauranteContext);
+    const {restaurante} = useContext(Context);
 
     console.log(restaurante)
     return(
