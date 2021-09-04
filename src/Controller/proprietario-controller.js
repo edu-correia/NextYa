@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Context } from '../AppContext/Context';
 
 
-export default function CadastroProprietario(){
+export const CadastroProprietario = ()=>{
     const history = useHistory();
     const { proprietario } = useContext(Context);
     console.log(proprietario.dadosProprietario);
@@ -27,4 +27,8 @@ export default function CadastroProprietario(){
         <span>Teste</span>
     )
 
+}
+
+export const LoginProprietario = () =>{
+    
 }

@@ -4,11 +4,12 @@ import LoginEmail from '../Pages/Login/Email'
 import LoginSenha from '../Pages/Login/Password'
 import EscolhaCadastro from '../Pages/Cadastro/EscolhaCadastro'
 import CadastroMotoqueiro from '../Pages/Cadastro/CadastroMotoqueiro/Dados'
-import CadastroProprietario from '../Pages/Cadastro/CadastroRestaurante/Proprietario'
+import CadastroProprietarios from '../Pages/Cadastro/CadastroRestaurante/Proprietario'
 import CadastroRestaurante from '../Pages/Cadastro/CadastroRestaurante/Restaurante'
 import FinalPage from '../Pages/Cadastro/FinalPage'
-import ControllerProprietario from '../Controller/proprietario-controller'
+import { CadastroProprietario } from '../Controller/proprietario-controller'
 import ControllerRestaurante from '../Controller/restaurante-controller'
+import RoutePrivate from './Private/Private'
 import { Provider } from '../AppContext/Provider'
 
 const Routes = () => {
@@ -24,10 +25,10 @@ const Routes = () => {
                         <Route path="/Login/Senha" component={LoginSenha} exact/>
                         <Route path="/Cadastro" component={EscolhaCadastro} exact/>
                         <Route path="/Cadastro/Motoqueiro" component={CadastroMotoqueiro}/>
-                        <Route path="/Cadastro/Proprietario" component={CadastroProprietario} exact/>
+                        <Route path="/Cadastro/Proprietario" component={CadastroProprietarios} exact/>
                         <Route path="/Cadastro/Restaurante" component={CadastroRestaurante}/>
                         <Route path="/Cadastro/Verificacao" component={FinalPage}/>
-                        <Route path="/Post/Proprietario" component={ControllerProprietario}/>
+                        <Route path="/Post/Proprietario" component={CadastroProprietario}/>
                         <Route path="/Post/Restaurante" component={ControllerRestaurante}/>
                     </Switch>
                 </BrowserRouter>
