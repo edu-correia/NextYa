@@ -21,7 +21,7 @@ const Routes = () => {
                     <Switch>
                         <Route path="/" component={Home} exact/>
                         <Route path="/Login" component={LoginEmail} exact/>
-                        <Route path="/Login/Senha" component={LoginSenha}/>
+                        <Route path="/Login/Senha" component={LoginSenha} exact/>
                         <Route path="/Cadastro" component={EscolhaCadastro} exact/>
                         <Route path="/Cadastro/Motoqueiro" component={CadastroMotoqueiro}/>
                         <Route path="/Cadastro/Proprietario" component={CadastroProprietario} exact/>

@@ -1,0 +1,57 @@
+.container--emailLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+
+
+    .formEmail{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        input{
+            display: inline-block;
+            width: 25rem;
+            height: 2.5rem;
+            margin-bottom: 10px;
+            border: 1px solid #ADADAD;
+            color: #9c9c9c;
+            font-family: Inter;
+            font-size: 1rem;
+            padding-left: 3px;
+        }
+        .btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .infoCadastro{
+        text-align: center;
+        font-family: Lexend Deca;
+        
+        .--Login{
+            color: #AE03FF;
+        }
+    }
+}
+
+@media (min-width:960px),(min-width:1920px){
+    .form{
+        width: 40%;
+    }
+}
+
+@media (min-width: 1024px){
+    .form{
+        width: 55%;
+    }
+}
+
+@media (min-width: 2560px){
+    .form{
+        width: 22%;
+    }
+}
