@@ -27,7 +27,6 @@ function Senha() {
     ev.preventDefault();
     let email = dadosLogin.dadosLogin.email;
     setToDadosLogin(email, values)
-    console.log(values)
   }
 
 
