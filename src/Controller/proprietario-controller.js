@@ -28,7 +28,3 @@ export const CadastroProprietario = ()=>{
     )
 
 }
-
-export const LoginProprietario = () =>{
-    
-}

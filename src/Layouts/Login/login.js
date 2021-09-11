@@ -3,43 +3,58 @@ import { BoasVindas } from "../../Components/BoasVindas";
 import BtnNext from "../../Components/ButtonGeneric";
 import { Link } from "react-router-dom";
 import BackArrow from "../../Components/BackArrow";
-import { Context } from "../../AppContext/Context";
+import { useHistory } from "react-router-dom";
+import { Context } from '../../AppContext/Context'
 import "./style.scss";
+import Axios from "axios";
 
-const initialValue ={
+const initialValue = {
+  email: '',
   senha: ''
 }
 
-function Senha() {
 
-  const [values, setValues] = useState(initialValue);
+const Email = () => {
+  const history = useHistory();
   const {setToDadosLogin} = useContext(Context);
-  const {dadosLogin} = useContext(Context);
+  const [values, setValues] = useState(initialValue);
+
+
   function onChange(ev) {
     const { value, name } = ev.target;
     setValues({
       ...values,
-      [name]:value,
+      [name]: value,
     });
   }
-
-  function onSubmit (ev){
+  
+  function onSubmit(ev) {
     ev.preventDefault();
-    let email = dadosLogin.dadosLogin.email;
-    setToDadosLogin(email, values)
+    setToDadosLogin(values);
+    history.push('/Post/Login');
   }
-
 
   return (
     <>
-      <Link to="/Login">
+      <Link to="/">
         <BackArrow />
       </Link>
       <div className="container--emailLogin">
-        <BoasVindas title="Bem vindo(a) de volta!" info="Digite sua senha:" />
+        <BoasVindas
+          title="Bem vindo(a) de volta!"
+          info="Digite seus dados:"
+        />
 
-        <div className="formEmail">
-          <form onSubmit={onSubmit}>
+        <div>
+          <form className="formEmail" onSubmit={onSubmit}>
+            <input
+              type="email"
+              required
+              name="email"
+              placeholder="E-mail"
+              onChange={onChange}
+              value={values.email}
+            />
             <input
               type="password"
               required
@@ -58,10 +73,19 @@ function Senha() {
               />
             </div>
           </form>
+
+          <div className="infoCadastro">
+            <p>
+              Novo por aqui? faça seu{" "}
+              <Link className="Link --Login" to="/Cadastro">
+                cadastro
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default Senha;
+export default Email;
