@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import BackArrow from '../../../../Components/BackArrow';
 import { Link } from 'react-router-dom';
@@ -6,9 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import ButtonNext from '../../../../Components/ButtonGeneric';
 import './proprietario.scss';
 import { BoasVindas } from '../../../../Components/BoasVindas';
-import { Context } from '../../../../AppContext/Context';
-
-
+import { cadastrarProprietario } from '../../../../Controller/proprietario-controller';
 
 const proprietarioValue = {
     nome: '',
@@ -18,24 +16,24 @@ const proprietarioValue = {
     telefone: ''
 };
 
-
-
 const Proprietario = () => {
-    
-    const {setToDadosProprietario} = useContext(Context);
     const[values, setValues] = useState(proprietarioValue);
     const history = useHistory();
-
     
     function onChange(ev){
         const{name, value} = ev.target;
         setValues({...values, [name]: value});
     }
     
-    function onSubmit(ev){
+    async function onSubmit(ev){
         ev.preventDefault(); 
-        setToDadosProprietario(values);
-        history.push('/Cadastro/Restaurante');
+        const succeeded = await cadastrarProprietario(values);
+
+        if(succeeded){
+            history.push('/Proprietario')
+        }else{
+            /*Display some error*/
+        }
     }
 
     return(

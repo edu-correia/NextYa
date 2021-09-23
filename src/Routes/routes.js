@@ -7,8 +7,6 @@ import CadastroMotoqueiro from '../Pages/Cadastro/CadastroMotoqueiro/Dados'
 import CadastroProprietarios from '../Pages/Cadastro/CadastroRestaurante/Proprietario'
 import CadastroRestaurante from '../Pages/Cadastro/CadastroRestaurante/Restaurante'
 import FinalPage from '../Pages/Cadastro/FinalPage'
-import { CadastroProprietario } from '../Controller/proprietario-controller'
-import ControllerRestaurante from '../Controller/restaurante-controller'
 import RoutePrivate from './Private/Private'
 import { Provider } from '../AppContext/Provider'
 
@@ -28,8 +26,8 @@ const Routes = () => {
                         <Route path="/Cadastro/Proprietario" component={CadastroProprietarios} exact/>
                         <Route path="/Cadastro/Restaurante" component={CadastroRestaurante}/>
                         <Route path="/Cadastro/Verificacao" component={FinalPage}/>
-                        <Route path="/Post/Proprietario" component={CadastroProprietario}/>
-                        <Route path="/Post/Restaurante" component={ControllerRestaurante}/>
+                        {/* <Route path="/Post/Proprietario" component={CadastroProprietario}/>
+                        <Route path="/Post/Restaurante" component={ControllerRestaurante}/> */}
                     </Switch>
                 </BrowserRouter>
             </Provider>

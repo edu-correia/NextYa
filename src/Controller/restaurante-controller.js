@@ -1,26 +1,13 @@
-import { useContext } from 'react';
-import Axios from 'axios';
-import { useHistory } from 'react-router-dom';
-import { Context } from '../AppContext/Context';
+import api from "../services/api"
 
-export default function CadastroRestaurante(){
-    const history = useHistory();
-    const { restaurante } = useContext(Context);
+async function cadastrarRestaurante(dados){
+    const response = await api.post('/restaurante/cadastro', dados);
 
-    console.log(restaurante.dadosRestaurante);
+    /* Error handling */
 
-    Axios.post('http://localhost:4000/restaurante/cadastro', restaurante.dadosRestaurante)
-        .then((response) =>{
-            console.log('Restaurante deu boa')
-            console.log(response);
-            history.push('/Cadastro/Verificacao');
-        })
-        .catch((error) => {
-            console.log('Erro no restaurante');
-            console.log(error);
-        })
+    return response;
+}
 
-    return(
-        <></>
-    )
+export {
+    cadastrarRestaurante
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import BackArrow from '../../../../Components/BackArrow';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import ButtonNext from '../../../../Components/ButtonGeneric';
 import './restaurante.scss';
 import { BoasVindas } from '../../../../Components/BoasVindas';
-import { Context } from '../../../../AppContext/Context';
+import { cadastrarRestaurante } from '../../../../Controller/restaurante-controller';
 
 
 const restauranteValue = {
@@ -22,11 +22,8 @@ const restauranteValue = {
 }
 
 const Restaurante = () => {
-
-    const {setToDadosRestaurante} = useContext(Context);
     const [values, setValues] = useState(restauranteValue);
     const history = useHistory();
-
 
     function onChange(ev){
         const{name, value} = ev.target;
@@ -41,10 +38,16 @@ const Restaurante = () => {
         setValues({...values, 'fotorestaurante':formData.get('fotorestaurante')});
     }
 
-    function onSubmit(ev){
+    async function onSubmit(ev){
         ev.preventDefault(); 
-        setToDadosRestaurante(values);
-        history.push('/Post/Proprietario')
+        const succeeded = await cadastrarRestaurante(values);
+        console.log(succeeded);
+        if(succeeded){
+            history.push('/Post/Proprietario')
+        }else{
+            /*Display some error*/
+        }
+
     
     }
 
